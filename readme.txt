@@ -1,8 +1,3 @@
-
-
-========================================================
- This pattern is downloaded from www.subtlepatterns.com 
- If you need more, that's where to get'em.
- ========================================================
+A Event Management Web Application made using HTML, CSS, JSP and Oracle that helps to plan and commence events without any difficulties. 
  
  
