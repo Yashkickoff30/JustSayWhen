@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>Catering Application Form</title>
+<style>
+body {
+background-image: url("old.jpg");
+background-repeat: no-repeat;
+background-size:cover;
+}
+form{
+      width:500px;
+      padding:20px;
+      margin:auto;
+      background:#7a7cbb;
+      font-size:20px;
+} 
+input[type=text]{
+      width:100%;
+      padding:5px;
+      font-size:17px;
+}
+input[type=submit]{
+      padding:5px;
+      font-size:18px;
+      background-color: #FF6347;
+      
+}
+input[type=reset]{
+      padding:5px;
+      font-size:18px;
+      background-color: #FF6347;
+      
+}
+
+
+textarea{
+      background:#f2f2f2;
+      width:500px;
+      font-size:20px;
+      margin:auto;
+
+}
+</style>
+</head>
+
+
+<body>
+<table name="title" border="0">
+<tr>
+<td>
+<img src="neo.jpg" height="150" width="300"></td>
+<td width="900">
+<h1><font color="darkblue">Event</h1>
+</font>
+<p><font size="5">Event Organisers</p></font>
+</td>
+<td><marquee direction="down" scrollamount="2"><h2 style="color:green;">Toll-free Number<img src="hand.png" align="right" height="40" width="45"></marquee><h2>
+<img src="logo.png" height="25" width="25" align="left"><p style="font-size:20;">1800-425-1660</p><h3><font color="darkpink">E-Mail:</font>
+neofisheries@gmail.com</h3>
+<table name="socialmedia" border="1">
+<tr>
+<td><a href="https;//www.facebook.com"><img src="fb.png" height="60" width="60"></></td>
+<td><a href="https://twitter.com"><img src="tweet.PNG" height="60" width="60"></a></td>
+</table>
+</td>
+</tr>
+</table>
+<h2><b><u><center>Catering Service Application Form</b></u></center></h2>
+<hr/>
+<br>
+<hr/>
+<br>
+<form name="catering" action="new.php" method="POST">
+<h4><b>
+<p >
+ 
+1.Enter your Service Id:
+<input type="text" align="center" name="cid" value=" " required></input>
+<br><br>
+
+2.Enter your Service Name:
+<input type="text" align="center" name="cname" value=" " required></input>
+<br><br>
+
+3.Enter your Address:
+<textarea rows = "5" cols = "50" name = "cadd" required>
+</textarea><br><br>
+
+4.Enter your Mobile-No:
+<input type="text" align="center" name="cname" value=" " required></input>
+<br><br>
+
+5.Enter your Food Preference:<br>
+<input type="radio" name="fp" value="Veg">Veg</input>
+<input type="radio" name="fp" value="Non_Veg">Non-Veg</input>
+<br><br>
+
+6.Enter your Food Type:<br>
+<input type="radio" name="ft" value="North_Indian">North-Indian</input>
+<input type="radio" name="ft" value="South_Indian">South-Indian</input>
+<br><br>
+
+7.Enter the no. of guests that you will be able to serve:<br>
+<input type="radio" name="gs" value="200_300">200 to 300</input>
+<input type="radio" name="gs" value="500_1000">500 to 1000</input>
+<input type="radio" name="gs" value="More_than_1000">More than 1000</input>
+<br><br>
+
+8.Enter Availability:<br>
+<input type="radio" name="av" value="always">Always</input>
+<input type="radio" name="av" value="may_or_may_not_be">May or may not be</input>
+<br><br>
+
+9.Enter your budget:<br>
+<input type="text" name="cb" value=" "></input>
+<br><br>
+
+<center><input type="submit" name="submit" value="SUBMIT"></input></center>
+<br>
+
+<center><input type="reset" name="reset" value="RESET"></input></center></p>
+</form>
+
+<form name="update12" action="update1.php" method="POST">
+<input type="submit" name="reset" value="UPDATE"></input>
+<br>
+<br>
+</h4>
+</b>
+
+</form>
+</body>
+</html>
+

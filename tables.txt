@@ -1,0 +1,169 @@
+//catering
+create table catering1
+(
+	service_id number(3) not null primary key,
+	service_name varchar(10),
+	address varchar(25),
+	ph_no number(10)
+);
+
+create table catering2
+(
+	food_id number(3),
+	food_type varchar(12),
+	food_preference varchar(8),
+	foreign key(food_id)
+	references catering1(service_id)
+	on delete cascade
+);
+
+create table catering3
+(
+	guest_id number(3),
+	no_of_guests varchar(15),
+	availability varchar(15),
+	budget number(6),
+	foreign key(guest_id)
+	references catering1(service_id)
+	on delete cascade
+);
+
+//photography
+
+create table photography1
+(
+	service_id number(3) not null primary key,
+	service_name varchar(10),
+	address varchar(25),
+	ph_no number(10)
+);
+
+create table photography2
+(
+	photo_id number(3),
+	type varchar(12),
+	budget number(6),
+	foreign key(photo_id)
+	references photography1(service_id)
+	on delete cascade
+);
+//hall
+
+create table hall1
+(
+	service_id number(3) not null primary key,
+	service_name varchar(10),
+	address varchar(25),
+	ph_no number(10)
+);
+
+create table hall2
+(
+	hall_id number(3),
+	pincode number(6),
+	no_of_guests varchar(15),
+	budget number(6),
+	foreign key(hall_id)
+	references hall1(service_id)
+	on delete cascade
+);
+
+//orchestra
+
+create table orchestra1
+(
+	service_id number(3) not null primary key,
+	service_name varchar(10),
+	address varchar(25),
+	ph_no number(10)
+);
+
+create table orchestra2
+(
+	ref_id number(3),
+	type varchar(12),
+	budget number(6),
+	foreign key(ref_id)
+	references orchestra1(service_id)
+	on delete cascade
+);
+
+//decor and styling
+
+create table decor1
+(
+	service_id number(3) not null primary key,
+	service_name varchar(10),
+	address varchar(25),
+	ph_no number(10)
+);
+
+create table decor2
+(
+	decor_id number(3),
+	decorations varchar(10),
+	budget number(6),
+	foreign key(decor_id)
+	references decor1(service_id)
+	on delete cascade
+);
+
+
+create table user1
+(
+	user_id number(3) not null primary key,
+	user_name varchar(15),
+	address varchar(45),
+	ph_no number(10),
+	password varchar(20)
+);
+
+create table orderplace
+(
+	user_ref_id number(3),
+	c_id number(3),
+	p_id number(3),
+	h_id number(3),
+	o_id number(3),
+	d_id number(3),
+	status varchar(12),
+	foreign key(user_ref_id)
+	references user1(user_id)
+	on delete cascade
+);
+
+create table cpass
+(
+	cid number(3) not null primary key,
+	cpass varchar(25)
+);
+
+create table ppass
+(
+	pid number(3) not null primary key,
+	ppass varchar(25)
+);
+
+create table hpass
+(
+	hid number(3) not null primary key,
+	hpass varchar(25)
+);
+
+create table opass
+(
+	oid number(3) not null primary key,
+	opass varchar(25)
+);
+
+create table dpass
+(
+	did number(3) not null primary key,
+	dpass varchar(25)
+);
+
+
+select * from catering1 full join catering2 on catering1.service_id=catering2.food_id full join catering3 on catering1.service_id=catering3.guest_id where food_type=South_Indian and food_preference=Non_Veg;
+	
+
+select * from (select * from catering2 full join catering3 on catering2.food_id=catering3.guest_id where food_type='South_Indian' and food_preference='Non_Veg') where rownum=1;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+  background-image: url("green.jpg");
+  min-height: 100%;
+  min-width: 1024px;
+  height: auto;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: full-cover;
+  background-position: center;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: 40px 90px;
+  text-align: center;
+  font-size: 46px;
+  cursor: pointer;
+  margin: 25px;
+}
+
+.button:hover {
+  background-color: green;
+}
+</style>
+</head>
+<body>
+
+<h1>Select your service to login</h1>
+<br><br><br><br>
+
+<form action="login.jsp" method="post">
+<button name="service" type="submit" value="1" class="button">Catering</button>
+<button name="service" type="submit" value="2" class="button">Photography</button>
+<button name="service" type="submit" value="3" class="button">Hall booking</button>
+<button name="service" type="submit" value="4" class="button">Orchestra</button>
+<button name="service" type="submit" value="5" class="button">Decor and styling</button>
+</form>
+
+</body>
+</html>
+
+
+

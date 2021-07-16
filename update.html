@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>insert</title>
+<style>
+body {
+background-image: url("old1.jpg");
+background-repeat: no-repeat;
+background-size:cover;
+}
+form{
+      width:500px;
+      padding:20px;
+      margin:auto;
+      background:#FF6347;
+      font-size:20px;
+} 
+input[type=text]{
+      width:100%;
+      padding:5px;
+      font-size:17px;
+}
+input[type=submit]{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 46px;
+  cursor: pointer;
+  margin: 25px;
+}
+}
+
+}
+textarea{
+      background:#f2f2f2;
+      width:500px;
+      font-size:20px;
+      margin:auto;
+
+}
+</style>
+</head>
+<body>
+<br>
+<hr/><br>
+<hr/>
+<form name="form2" action="catering.jsp" method="POST">
+<h4><b>
+<p>
+
+1.Enter your new Address:
+<textarea rows = "5" cols = "50" name = "cadd" required>
+</textarea><br><br>
+
+2.Enter your new Mobile-No:
+<input type="text" align="center" name="cmob" value=" " required></input>
+<br><br>
+
+3.Enter your new budget:<br>
+<input type="text" name="cb" value=" "></input>
+<br><br> </p>
+</h4></b>
+<hr/><br>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+  pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.*"%>
+<%
+String sid=request.getParameter("service");
+%>
+<center><input type="submit" name="s1" value="UPDATE"></input><br><br>
+</form>
+</body>
+</html>
